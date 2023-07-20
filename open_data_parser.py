@@ -13,9 +13,6 @@ def parse_data(filepath: str, speech_data):
     # iterate over the <rede> elements and extract their data
     for speech in root.iter('rede'):
 
-        # get id
-        speech_id = speech.get('id')
-
         # get speech content
         speech_text = speech.text.strip() if speech.text else ''
         for paragraph in speech.iter('p'):
@@ -40,10 +37,8 @@ def parse_data(filepath: str, speech_data):
         
         # append all data to speech_data
         speech_data.append({
-            'id': speech_id,
             'text': speech_text,
             'date': pd.to_datetime(protocol_date, dayfirst=True),
-            'speaker_id': speaker.get('id'),
             'speaker_name': speaker_name,
             'speaker_gender': speaker_gender,
             'speaker_role': speaker_role.text if speaker_role is not None else None,
@@ -60,7 +55,7 @@ def get_data():
     speech_data = []
 
     # loop over all the XML files in the data directory
-    for protocol in glob.glob("open_data/*.xml"):
+    for protocol in glob.glob("D:/DATEIEN/Studium/Master/MA/data/open_data/*.xml"):
         speech_data = parse_data(protocol, speech_data)
 
     # create pandas DataFrame with the extracted data
