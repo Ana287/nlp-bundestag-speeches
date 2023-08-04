@@ -19,8 +19,11 @@ def parse_data(filepath: str, speech_data):
             speech_text += ' ' + paragraph.text.strip() if paragraph.text else ''
 
         # get speaker info
-        speaker_name = speech.get('name')
-        first_name = speaker_name.split()[0]
+        speaker_name = speech.get('name').strip()
+        if "." in speaker_name.split()[0]:
+            first_name = speaker_name.split()[1]
+        else:
+            first_name = speaker_name.split()[0]
         
         # gender classification
         speaker_gender = gc.get_gender(first_name)

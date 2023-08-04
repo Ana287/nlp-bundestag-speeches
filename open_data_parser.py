@@ -20,8 +20,8 @@ def parse_data(filepath: str, speech_data):
 
         # get speaker info
         speaker = speech.find('.//redner')
-        first_name = speaker.find('.//vorname').text
-        speaker_name = first_name + ' ' + speaker.find('.//nachname').text
+        first_name = speaker.find('.//vorname').text.strip()
+        speaker_name = first_name + ' ' + speaker.find('.//nachname').text.strip()
         
         # gender classification
         speaker_gender = gc.get_gender(first_name)
