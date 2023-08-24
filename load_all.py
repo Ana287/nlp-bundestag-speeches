@@ -22,8 +22,9 @@ merged_df = merged_df.reset_index(drop=True)
 # replace double occurences of the same speaker and unknown genders
 merged_df['speaker_name'] = merged_df['speaker_name'].replace({'Kersten Naumann': 'Kersten Steinke', 'Cajus Julius Caesar': 'Cajus Caesar', 'Matern von Marschall von Bieberstein': ' Matern von Marschall'})
 
-# get rid of mostly_male and mostly_female gender classification
+# get rid of mostly_male, mostly_female and unknown gender classification
 merged_df['speaker_gender'] = merged_df['speaker_gender'].replace({'mostly_male': 'male', 'mostly_female': 'female'})
+merged_df.drop(merged_df[merged_df['speaker_gender'] == 'unknown'].index, inplace=True)
 
 # fix faulty gender classification due to whitespace characters
 unknown_rows = merged_df[merged_df['speaker_gender'] == 'unknown']
@@ -42,6 +43,9 @@ merged_df['speaker_id'] = merged_df.groupby('speaker_name').ngroup() + 1
 
 # convert speaker_names to title case again
 merged_df['speaker_name'] = merged_df['speaker_name'].str.title()
+
+# add column for speech length
+merged_df['speech_length'] = merged_df['text'].apply(len)
 
 # save dataframe to a pickled file
 merged_df.to_pickle('data_merged.pkl')
