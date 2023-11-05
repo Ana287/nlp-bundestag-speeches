@@ -19,7 +19,7 @@ merged_df['id'] = range(0, len(merged_df))
 merged_df['id'] = 'SP-' + merged_df['date'].dt.year.astype(str) + '-' + merged_df['id'].astype(str)
 merged_df = merged_df.reset_index(drop=True)
 
-# replace double occurences of the same speaker and unknown genders
+# replace double occurences of the same speaker
 merged_df['speaker_name'] = merged_df['speaker_name'].replace({'Kersten Naumann': 'Kersten Steinke', 'Cajus Julius Caesar': 'Cajus Caesar', 'Matern von Marschall von Bieberstein': ' Matern von Marschall'})
 
 # get rid of mostly_male, mostly_female and unknown gender classification
