@@ -10,6 +10,9 @@ def parse_data(filepath: str, speech_data):
     # get date 
     protocol_date = root.find('.//date').text
 
+    # get legislative period
+    legislative_period = root.find('.//legislativePeriod').text
+
     # iterate over the <rede> elements and extract their data
     for speech in root.iter('sp'):
 
@@ -40,6 +43,7 @@ def parse_data(filepath: str, speech_data):
         speech_data.append({
             'text': speech_text,
             'date': pd.to_datetime(protocol_date, dayfirst=True),
+            'legislative_period': legislative_period,
             'speaker_name': speaker_name,
             'speaker_gender': speaker_gender,
             'speaker_role': speaker_role if speaker_role is not None else None,
