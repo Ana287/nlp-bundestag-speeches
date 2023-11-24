@@ -1,0 +1,165 @@
+{
+    "election_periods": [
+      {
+        "number": 1,
+        "start_year": 1949,
+        "end_year": 1953,
+        "total_members": 415,
+        "average_percentage_women": 7.9,
+        "average_percentage_men": 92.1
+      },
+      {
+        "number": 2,
+        "start_year": 1953,
+        "end_year": 1957,
+        "total_members": 514,
+        "average_percentage_women": 9.4,
+        "average_percentage_men": 90.6
+      },
+      {
+        "number": 3,
+        "start_year": 1957,
+        "end_year": 1961,
+        "total_members": 519,
+        "average_percentage_women": 9.3,
+        "average_percentage_men": 90.7
+      },
+      {
+        "number": 4,
+        "start_year": 1961,
+        "end_year": 1965,
+        "total_members": 521,
+        "average_percentage_women": 8.85,
+        "average_percentage_men": 91.15
+      },
+      {
+        "number": 5,
+        "start_year": 1965,
+        "end_year": 1969,
+        "total_members": 518,
+        "average_percentage_women": 7.4,
+        "average_percentage_men": 92.6
+      },
+      {
+        "number": 6,
+        "start_year": 1969,
+        "end_year": 1972,
+        "total_members": 518,
+        "average_percentage_women": 6.4,
+        "average_percentage_men": 93.6
+      },
+      {
+        "number": 7,
+        "start_year": 1972,
+        "end_year": 1976,
+        "total_members": 518,
+        "average_percentage_women": 6.35,
+        "average_percentage_men": 93.65
+      },
+      {
+        "number": 8,
+        "start_year": 1976,
+        "end_year": 1980,
+        "total_members": 518,
+        "average_percentage_women": 7.6,
+        "average_percentage_men": 92.4
+      },
+      {
+        "number": 9,
+        "start_year": 1980,
+        "end_year": 1983,
+        "total_members": 519,
+        "average_percentage_women": 8.6,
+        "average_percentage_men": 91.4
+      },
+      {
+        "number": 10,
+        "start_year": 1983,
+        "end_year": 1987,
+        "total_members": 520,
+        "average_percentage_women": 9.9,
+        "average_percentage_men": 90.1
+      },
+      {
+        "number": 11,
+        "start_year": 1987,
+        "end_year": 1990,
+        "total_members": 591,
+        "average_percentage_women": 16.6,
+        "average_percentage_men": 83.4
+      },
+      {
+        "number": 12,
+        "start_year": 1990,
+        "end_year": 1994,
+        "total_members": 662,
+        "average_percentage_women": 21.05,
+        "average_percentage_men": 78.95
+      },
+      {
+        "number": 13,
+        "start_year": 1994,
+        "end_year": 1998,
+        "total_members": 672,
+        "average_percentage_women": 26.55,
+        "average_percentage_men": 73.45
+      },
+      {
+        "number": 14,
+        "start_year": 1998,
+        "end_year": 2002,
+        "total_members": 667,
+        "average_percentage_women": 31.3,
+        "average_percentage_men": 68.7
+      },
+      {
+        "number": 15,
+        "start_year": 2002,
+        "end_year": 2005,
+        "total_members": 602,
+        "average_percentage_women": 33.2,
+        "average_percentage_men": 66.8
+      },
+      {
+        "number": 16,
+        "start_year": 2005,
+        "end_year": 2009,
+        "total_members": 612,
+        "average_percentage_women": 31.7,
+        "average_percentage_men": 68.3
+      },
+      {
+        "number": 17,
+        "start_year": 2009,
+        "end_year": 2013,
+        "total_members": 621,
+        "average_percentage_women": 33.1,
+        "average_percentage_men": 66.9
+      },
+      {
+        "number": 18,
+        "start_year": 2013,
+        "end_year": 2017,
+        "total_members": 630,
+        "average_percentage_women": 36.9,
+        "average_percentage_men": 63.1
+      },
+      {
+        "number": 19,
+        "start_year": 2017,
+        "end_year": 2021,
+        "total_members": 708,
+        "average_percentage_women": 31.15,
+        "average_percentage_men": 68.85
+      },
+      {
+        "number": 20,
+        "start_year": 2021,
+        "end_year": 2023,
+        "total_members": 736,
+        "average_percentage_women": 34.8,
+        "average_percentage_men": 65.2
+      }
+    ]
+  }
+  
