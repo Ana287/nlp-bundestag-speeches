@@ -42,7 +42,7 @@ def parse_data(filepath: str, speech_data):
         # append all data to speech_data
         speech_data.append({
             'text': speech_text,
-            'date': pd.to_datetime(protocol_date, dayfirst=True),
+            'date': pd.to_datetime(protocol_date, dayfirst=False),
             'legislative_period': legislative_period,
             'speaker_name': speaker_name,
             'speaker_gender': speaker_gender,
@@ -60,7 +60,7 @@ def get_data():
     speech_data = []
 
     # loop over all the XML files in the data directory
-    for protocol in glob.glob("D:/DATEIEN/Studium/Master/MA/data/germa_parl_data/*.xml"):
+    for protocol in glob.glob("C:/Users/Ana/OneDrive - Hochschule Düsseldorf/MA/data/germa_parl_data/*.xml"):
         speech_data = parse_data(protocol, speech_data)
 
     # create pandas DataFrame with the extracted data
