@@ -8,7 +8,7 @@ detector = gd.Detector()
 gender_by_name = {}
 
 # read json-file containing custom gender classification
-with open('custom_gender_map.json', 'r') as json_file:
+with open('data/custom_gender_map.json', 'r') as json_file:
     gender_map = json.load(json_file)
 
 def get_gender(name: str):
