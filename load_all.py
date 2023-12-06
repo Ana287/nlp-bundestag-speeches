@@ -12,7 +12,7 @@ def clean_names(input_string):
     return re.sub(r'P{L}', '', input_string)
 
 # merge dataframes
-merged_df = pd.concat([df_od, df_gp], ignore_index=True)
+merged_df = pd.concat([df_od, df_gp], ignore_index=True) # TODO prüfen ob index nach df.drop() noch stimmt
 
 # set continuous IDs
 merged_df['id'] = range(0, len(merged_df))
