@@ -4,22 +4,22 @@ This repository is part of the thesis entitled "A natural language processing an
 
 ## Data basis
 
-The plenary protocol data has been extracted from two sources:
+The plenary protocol data has been extracted from the following two sources:
 - Blaette, Andreas (2017): GermaParl. Corpus of Plenary Protocols of the German Bundestag. TEI files, availables at: https://github.com/PolMine/GermaParlTEI.
 - Deutscher Bundestag. Open Data - Plenarprotokolle der 20. Wahlperiode und Stammdaten aller Abgeordneten seit 1949. https://www.bundestag.de/services/opendata
 
 ## Repository Content
 
 ### Scripts
-- `open_data_parser.py`: parses the XML files from the German Bundestag, extracts relevant information and stores it in a pandas DataFrame.
-- `germa_parl_parser.py`: parses the XML files from the GermaParl-Corpus, extracts relevant information and stores it in a pandas DataFrame.
-- `gender_classification.py`: uses the `gender_guesser` library and `custom_gender_map.json` to determine and return the gender of a given name.
-- `assemble_data.py`: merges the two dataframes, cleans and standardizes speaker names and gender classifications, adds IDs and speech lengths and saves the resulting dataframe to a pickled file.
-- `create_subdata.py`: divides dataframe into yearly sub-dataframes and saves them to pickled files.
+- `open_data_parser.py`: parses the XML files from the German Bundestag, extracts relevant information and stores it in a pandas DataFrame
+- `germa_parl_parser.py`: parses the XML files from the GermaParl-Corpus, extracts relevant information and stores it in a pandas DataFrame
+- `gender_classification.py`: uses the `gender_guesser` library and `custom_gender_map.json` to determine and return the gender of a given name
+- `assemble_data.py`: merges the two dataframes, cleans and standardizes speaker names and gender classifications, adds IDs and speech lengths and saves the resulting dataframe to a pickled file
+- `create_subdata.py`: divides dataframe into yearly sub-dataframes and saves them to pickled files (not used within the scope of this thesis but may be of use in the future)
 
 ### Notebooks
 
-- `data-exploration.ipynb`: initial data exploration like speech counts, gender distributions and speech length ratios.
+- `data-exploration.ipynb`: initial data exploration like speech counts, gender distributions and speech length ratios
 - `topic-modelling.ipynb`: training of LDA-model; saves topic distributions for every speech in a new dataframe
 - `topic-exploration.ipynb`: explores and plots different statistics surrounding the speech topics and their gender distributions
 - `interjection-analysis.ipynb`: quantitative analysis of comments and reactions during the speeches
@@ -40,6 +40,10 @@ The plenary protocol data has been extracted from two sources:
 - `models/log.joblib`: trained logistic regression model for gender prediction
 - `pyLDAvis/lda_150_topics.html`: web-based visualization of topic model with [pyLDAvis](https://github.com/bmabey/pyLDAvis)
 
+### Plots
+- `plots/gender_topic_distribution.pdf`: contains gender topic distribution plots for all relevant topics
+- `plots/gender_yearly_topic_distribution.pdf`: contains yearly gender topic distribution and average speeches per gender plots for all relevant topics
+
 ## How to Use
 
 1. Download XML files of interest from the data sources mentioned above
@@ -49,4 +53,4 @@ The plenary protocol data has been extracted from two sources:
 
 ## Acesss Dataframes
 
-The dataframes resulting from the different analyses have been saved to a pickle format and can be accessed via Zenodo:
+The dataframes resulting from the different analyses have been saved to a pickle format and can be accessed via [Zenodo](https://doi.org/10.5281/zenodo.10895276).
