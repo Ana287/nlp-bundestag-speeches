@@ -41,8 +41,8 @@ The plenary protocol data has been extracted from the following two sources:
 - `pyLDAvis/lda_150_topics.html`: web-based visualization of topic model with [pyLDAvis](https://github.com/bmabey/pyLDAvis)
 
 ### Plots
-- `plots/gender_topic_distribution.pdf`: contains gender topic distribution plots for all relevant topics
-- `plots/gender_yearly_topic_distribution.pdf`: contains yearly gender topic distribution and average speeches per gender plots for all relevant topics
+- `plots/gender_topic_distribution.pdf`: PDF-file containing gender topic distribution plots for all relevant topics
+- `plots/gender_yearly_topic_distribution.pdf`: PDF-file containing yearly gender topic distribution and average speeches per gender plots for all relevant topics
 
 ## How to Use
 
