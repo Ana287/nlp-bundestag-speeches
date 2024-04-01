@@ -59,7 +59,7 @@ def get_data():
     speech_data = []
 
     # loop over all the XML files in the data directory
-    for protocol in glob.glob("C:/Users/Ana/OneDrive - Hochschule Düsseldorf/MA/data/open_data/*.xml"):
+    for protocol in glob.glob("data/open_data/*.xml"):
         speech_data = parse_data(protocol, speech_data)
 
     # create pandas DataFrame with the extracted data
